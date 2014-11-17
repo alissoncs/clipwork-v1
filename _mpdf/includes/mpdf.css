@@ -1,0 +1,78 @@
+body {
+	text-align: justify;
+	font-family: "chelvetica";
+	line-height:1.6;
+	font-size:12pt;
+}
+h1 {
+	margin-bottom:1.5cm;
+}
+hr {
+}
+br {
+	line-height: 0;
+}
+p {
+	margin:0 0 0 0;
+	display:block;
+	text-indent:32pt;
+}
+ul {
+	padding:0 0 0 5cm;
+}
+ol {
+	margin-left:2cm;
+}
+li {
+	text-align: justify;
+}
+div {
+	text-align: justify;
+}
+span {
+	line-height:190%;
+}
+blockquote {
+	margin-left:4cm;
+	margin-right:0pt;
+	font-size:10pt;
+	line-height:14pt;
+	text-align: justify;
+	display:block;
+	text-indent: 0;
+}
+blockquote > p {
+	text-indent: 0;
+}
+
+blockquote img {
+	display: none;
+}
+img {
+	text-align: center;
+	display: inline !important;
+}
+table  {
+	border-spacing: collapse;
+	border:0;
+}
+tr {
+	border-collapse:  collapse;
+	padding:0;
+	border:0;
+}
+td {
+	padding: 0; 
+	border-collapse:  collapse;
+}
+samp {
+	width:120px;
+	display: inline-block;
+	background:#000;
+}
+
+
+h1,h2,h3,h4 {
+	font-size:inherit;
+	font-weight: normal;
+}

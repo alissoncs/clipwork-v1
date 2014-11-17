@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt">
+  <head>
+    <title>tinymce teste</title>
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<script type="text/javascript" src="../js/plugins/jquery.1.11.js" id="jquery-js"></script>
+<script type="text/javascript" src="../js/plugins/jquery.ui.js" id="nestable-js"></script>
+<script type="text/javascript" src="../js/plugins/bootstrap.js" id="bootstrap-js"></script>
+<script type="text/javascript" src="tinymce.min.js" id="tinymce-js"></script>
+
+  </head>
+  <body id="">
+    <script>
+    
+    function myCustomOnChangeHandler(inst) {
+        alert("Some one modified something");
+        alert("The HTML is now:" + inst.getBody().innerHTML);
+    } 
+
+   
+
+    $(document).on("ready",function(){
+
+     $("#editor").tinymce({
+            theme: "modern",
+            plugins: [
+              "advlist autolink lists link image table save visualchars textcolor colorpicker ",
+            ],
+             style_formats: [
+                    {title: 'Paragrafo', block: 'p'},
+                    {title: 'Nota de rodapé', inline: 'span', classes: 'rodape_nota', styles: {color: '#333'}}
+            ],
+            toolbar1: "undo redo styleselect | bold italic underline removeformat | subscript superscript forecolor | alignleft aligncenter alignright alignjustify blockquote | bullist numlist | unlink image table",
+           
+            menubar: false,
+            toolbar_items_size: 'small',
+            language : 'pt_BR',
+            autosave_ask_before_unload: false
+    });
+
+     $(".editor-simples").tinymce({
+            //theme: "modern",
+            plugins: [
+              "advlist autolink lists link image table save visualchars textcolor colorpicker ",
+            ],
+             style_formats: [
+                    {title: 'Paragrafo', block: 'p'},
+                    {title: 'Nota de rodapé', inline: 'span', classes: 'rodape_nota', styles: {color: '#333'}}
+            ],
+            toolbar1: "bold italic underline removeformat | subscript superscript forecolor",
+           
+            menubar: false,
+            toolbar_items_size: 'small',
+            language : 'pt_BR',
+            autosave_ask_before_unload: false
+    });
+
+      $("#main-form").on("submit",function(){
+        $("#editor").html("<p>foi<p>");
+        $(".editor-simples").first().html("<p>Minha piroca</p><p><img src='http://tinyautosave.googlecode.com/svn/wiki/images/tinyautosave-banner.jpg'/></p>");
+        return false;
+      });
+    });
+
+    </script>
+  <form id="main-form" method="post" action="send.php">
+    <textarea id="editor" name="editor">
+
+    </textarea>
+    <button type="submit">Enviar</button>
+  </form>
+
+<br><br><br><br>
+  <form id="form-2">
+    <textarea class="editor-simples" name="editor">
+
+    </textarea>
+  </form>
+
+  <form id="form-3">
+    <textarea class="editor-simples" name="editor">
+
+    </textarea>
+  </form>
+
+  <form id="form-4">
+    <textarea class="editor-simples" name="editor">
+
+    </textarea>
+  </form>
