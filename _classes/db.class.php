@@ -1,17 +1,12 @@
 <?php
 class db {
+
 	private $host = "localhost";
 	private $dbname = "clipwork";
 	public $user = "root";
 	private $pass = "root";
 	protected $c;
-
-	// private $host = "mysql.hostinger.com.br";
-	// private $dbname = "u511061986_acs";
-	// public $user = "u511061986_acs";
-	// private $pass = "jusduct32C";
-	// protected $c;
-
+	
 	public function __construct() {
 		$this->connect();
 	}
