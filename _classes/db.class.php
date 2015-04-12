@@ -3,7 +3,7 @@ class db {
 	private $host = "localhost";
 	private $dbname = "clipwork";
 	public $user = "root";
-	private $pass = "";
+	private $pass = "root";
 	protected $c;
 
 	// private $host = "mysql.hostinger.com.br";
