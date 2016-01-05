@@ -1,4 +1,5 @@
 <?php
+
 	if(isset($_GET["f"])):
 		include "../util.class.php";
 	endif;

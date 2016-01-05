@@ -1,6 +1,7 @@
 -- Cria a base de dados
 
--- CREATE DATABASE clipwork;
+CREATE DATABASE clipwork;
+use clipwork;
 
 
 
@@ -18,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 
 -- Inserção
 INSERT INTO `usuario` (`nome`,`sobrenome`,`email`,`senha`)
-VALUES ('Alisson','Carvalho', 'webalissoncs@gmail.com','123');
+VALUES ('Alisson','Carvalho', 'webalissoncs@gmail.com','6116afedcb0bc31083935c1c262ff4c9');
 
 -- Tabela Projeto
 CREATE TABLE IF NOT EXISTS `projeto` (

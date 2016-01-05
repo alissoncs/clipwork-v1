@@ -1,6 +1,5 @@
 <?php
 
-
 // Define diretório base PHP
 	if(!defined("ROOT")): 
 		define("ROOT", dirname(__FILE__)."/");
@@ -8,7 +7,8 @@
 
 // Diretório para HEADERS e redirects
 	if(!defined("URL")): 
-		define("URL", "http://".$_SERVER['SERVER_NAME']."/".basename(__DIR__)."/");
+		$path = 'http://'.$_SERVER['HTTP_HOST'] . '/';
+		define("URL", $path);
 	endif;
 
 // DIRETORIOS DO MVC
